@@ -21,7 +21,7 @@ class SubplotAnimation(animation.TimedAnimation):
             self.chunk = self.rate / 2
             self.read = self.stream.readframes
         else:
-            self.rate = 2 ** 14
+            self.rate = 2 ** 16
             self.chunk = 2 ** 12
             p = pyaudio.PyAudio()
             self.stream = p.open(format=pyaudio.paInt16, channels=1, rate=self.rate,
